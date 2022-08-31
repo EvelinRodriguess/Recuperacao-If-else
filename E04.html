@@ -1,0 +1,48 @@
+<script>
+    //PROBLEMA: Valor da hora trabalhada
+    //Peça para o programa perguntar ao usuário quanto recebe por hora trabalhada.
+    // Também peça para informar qual o cargo que ocupa.
+    //Se o usuário ocupar o cargo de "Programador", e trabalhar até 40 horas (inclusive), 
+    //não haverá adicional. Contudo, se o cargo for "Programador" e trabalhar mais de 40 horas,
+    // receberá 20% de adicional no salário.
+    //Se o usuário ocupar o cargo de "Analista", e trabalhar até 40 horas (inclusive), 
+    //não haverá adicional. Contudo, se o cargo for "Analista", e trabalhar mais de 40 horas, 
+    //receberá 25% de adicional no salário.
+    //Apresente em tela o cargo do usuário e também o valor final 
+    //recebido pelas horas trabalhadas.
+
+    //ENTRADA
+const cargo = prompt("Informe o cargo que ocupa:")
+const recebeporhora = Number(prompt("Informe quanto recebe por hora trabalhada:"))
+const horastrabalhadas = Number(prompt("Informe a quantidade de horas trabalhadas:"))
+    //PROCESSAMENTO
+    const salario = recebeporhora * horastrabalhadas
+    const adicional1 = salario + (20/100)
+    const adicional2 = salario + (25/100)
+
+if(cargo === "Programador" && horastrabalhadas <= 40)  
+document.write(`Não haverá adicional <br> você ocupa o cargo de programador <br> 
+e seu salário é de ${salario.toFixed(2)}`)  
+
+else if (cargo === "Programador" && horastrabalhadas > 40)
+document.write(`Haverá um adicional de 20% <br> você ocupa o cargo de programador <br>
+o valor das horas trabalhadas foi de ${salario.toFixed(2)}Reais <br>
+O valor final é de ${salario + adicional1.toFixed(2)}`)
+
+else if(cargo === "Analista" && horastrabalhadas <= 40)  
+document.write(`Não haverá adicional <br> você ocupa o cargo de analista <br> 
+e seu salário é de ${salario.toFixed(2)}`)  
+
+else if (cargo === "Analista" && horastrabalhadas > 40)
+document.write(`Haverá um adicional de 25% <br> você ocupa o cargo de analista <br>
+o valor das horas trabalhadas foi de ${salario.toFixed(2)}Reais <br>
+O valor final é de ${salario + adicional2.toFixed(2)}`)
+
+
+
+
+
+
+    //SAÍDA
+
+</script>

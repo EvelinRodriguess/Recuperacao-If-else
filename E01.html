@@ -1,0 +1,26 @@
+<script>
+    //PROBLEMA: Destino Turístico
+    //Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem 
+    //(São Paulo, Rio de Janeiro). Peça também para informar o preço do hotel para
+    // os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
+    //Calcule o custo final para cada um e apresente a melhor decisão,
+    // considerando que o destino pretendido será o com custo final mais baixo.
+    //Apresente o destino final e o custo final da viagem para o destino.
+
+    //ENTRADA
+const precoTransporteAereoSp = Number(prompt("Informe o preço do transporte aéreo para São Paulo:"))
+const precoTransporteAereoRj = Number(prompt("Informe o preço do transporte aéreo para o Rio de Janeiro:"))
+const precoHotelSp = Number(prompt("Informe o preço do hotel em São Paulo:"))
+const precoHotelRj = Number(prompt("Informe o preço do hotel no Rio de Janeiro:"))
+const dias = Number(prompt("Informe a quantidade de dias que pretende ficar no local:"))
+    //PROCESSAMENTO
+const valor1 = precoTransporteAereoSp + (precoHotelSp * dias)
+const valor2 = precoTransporteAereoRj + (precoHotelRj * dias)
+
+if (valor1 < valor2)
+document.write(`Você viajará para SP e gastará ${valor1.toFixed(2)}Reais`)
+else 
+document.write(`Você viajará para RJ e gastará ${valor2.toFixed(2)}Reais`)
+    //SAÍDA
+
+</script>
